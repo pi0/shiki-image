@@ -14,9 +14,6 @@ importers:
       '@takumi-rs/helpers':
         specifier: ^0.26.2
         version: 0.26.2
-      '@takumi-rs/wasm':
-        specifier: ^0.26.2
-        version: 0.26.2
       shiki:
         specifier: ^3.11.0
         version: 3.11.0
@@ -920,9 +917,6 @@ packages:
     peerDependenciesMeta:
       react-dom:
         optional: true
-
-  '@takumi-rs/wasm@0.26.2':
-    resolution: {integrity: sha512-K/i2SalpSaTM2k5I8E7aT1ltLI90YHfa9yl+GzfDkBmW0aQwxqfALNAZ3tIXYuogCUpTxKK8COzqStvLCOU/BQ==}
 
   '@tybys/wasm-util@0.10.0':
     resolution: {integrity: sha512-VyyPYFlOMNylG45GoAe0xDoLwWuowvf92F9kySqzYh8vmYm7D2u4iUJKa1tOUpS70Ku13ASrOkS4ScXFsTaCNQ==}
@@ -2823,8 +2817,6 @@ snapshots:
       '@takumi-rs/core-linux-x64-musl': 0.26.2
 
   '@takumi-rs/helpers@0.26.2': {}
-
-  '@takumi-rs/wasm@0.26.2': {}
 
   '@tybys/wasm-util@0.10.0':
     dependencies:
