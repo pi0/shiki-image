@@ -98,8 +98,8 @@ export function renderOptions(code: string, opts: CodeToImageOptions) {
   const lineHeight =
     Number.parseInt(opts.style?.lineHeight as string) || DEFAULT_LINE_HEIGHT;
 
-  const width = opts.width || columns * (fontSize * fontRatio);
-  const height = opts.height || lines * (fontSize * lineHeight);
+  const width = opts.width || (columns + 2) * (fontSize * fontRatio);
+  const height = opts.height || (lines + 2) * (fontSize * lineHeight);
 
   const format = opts.format || ("webp" as const);
 
