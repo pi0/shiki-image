@@ -1,5 +1,21 @@
 # Changelog
 
+## v0.1.3
+
+[compare changes](https://github.com/pi0/shiki-image/compare/v0.1.2...v0.1.3)
+
+### 🩹 Fixes
+
+- Quick fix for small code rendering ([305a0ec](https://github.com/pi0/shiki-image/commit/305a0ec))
+
+### 🏡 Chore
+
+- **release:** V0.1.2 ([2025f11](https://github.com/pi0/shiki-image/commit/2025f11))
+
+### ❤️ Contributors
+
+- Pooya Parsa ([@pi0](https://github.com/pi0))
+
 ## v0.1.2
 
 [compare changes](https://github.com/pi0/shiki-image/compare/v0.1.1...v0.1.2)
