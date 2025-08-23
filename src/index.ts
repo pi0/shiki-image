@@ -67,10 +67,19 @@ export async function codeToImage(code: string, options: CodeToImageOptions) {
     ),
   });
 
-  const font =
-    typeof options.font === "string"
-      ? await fetch(options.font).then((r) => r.arrayBuffer())
-      : options.font;
+  // Load font
+  let font: ArrayBuffer;
+  if (typeof options.font === "string") {
+    const fontCache: Map<string, ArrayBuffer> = ((
+      globalThis as any
+    ).__shikiImageFontCache__ ||= new Map());
+    font =
+      fontCache.get(options.font) ||
+      (await fetch(options.font).then((r) => r.arrayBuffer()));
+    fontCache.set(options.font, font);
+  } else {
+    font = options.font;
+  }
 
   const renderer = new Renderer({ fonts: [font] });
 

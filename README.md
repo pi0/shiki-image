@@ -56,6 +56,9 @@ Output format can be either `png`, `webp` or `jpeg` (default is `png`).
 
 Font used to render the code. Can be either a string (remote URL to fetch) or an ArrayBuffer.
 
+> [!TIP]
+> If a URL is passed, response will be cached in memory for the next renders.
+
 ### `width`
 
 Rendering width. By default is computed as `(columns + 2) * 10`.
