@@ -1,5 +1,26 @@
 # Changelog
 
+## v0.1.2
+
+[compare changes](https://github.com/pi0/shiki-image/compare/v0.1.1...v0.1.2)
+
+### 🚀 Enhancements
+
+- Options for better font rendering ([2281bb7](https://github.com/pi0/shiki-image/commit/2281bb7))
+- Export `loadFont` from `/core` ([94efe3e](https://github.com/pi0/shiki-image/commit/94efe3e))
+
+### 🏡 Chore
+
+- Apply automated updates ([80b6143](https://github.com/pi0/shiki-image/commit/80b6143))
+
+### ✅ Tests
+
+- Avoid updating snapshot in CI ([7cc2f9d](https://github.com/pi0/shiki-image/commit/7cc2f9d))
+
+### ❤️ Contributors
+
+- Pooya Parsa ([@pi0](https://github.com/pi0))
+
 ## v0.1.1
 
 ### 🚀 Enhancements
