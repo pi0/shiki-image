@@ -14,5 +14,6 @@ export async function codeToImageCore(
     width,
     height,
     format,
+    quality: opts.quality,
   });
 }

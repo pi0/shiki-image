@@ -10,6 +10,7 @@ export interface CodeToImageOptions {
   height?: number;
   style?: PartialStyle;
   format?: "png" | "webp" | "jpeg";
+  quality?: number;
 }
 
 export interface CodeToImageCoreOptions {

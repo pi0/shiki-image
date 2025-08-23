@@ -67,6 +67,10 @@ Rendering width. By default is computed as `(columns + 2) * 10`.
 
 Rendering height. By default is computed as `(lines + 2) * 20`.
 
+### `quality`
+
+Image quality between `0` to `100` (jpeg format only)
+
 ## Development
 
 <details>
