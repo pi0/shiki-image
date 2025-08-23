@@ -1,6 +1,6 @@
 {
   "name": "shiki-image",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Convert code snippets into images. Powered by shiki and takumi. Super fast.",
   "repository": "pi0/shiki-image",
   "license": "MIT",
