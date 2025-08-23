@@ -3,7 +3,7 @@ import { container, text, em, percentage } from "@takumi-rs/helpers";
 import type { CodeToImageCoreOptions, CodeToImageOptions } from "./types";
 
 const DEFAULT_FONT =
-  "https://fonts.bunny.net/ubuntu-sans-mono/files/ubuntu-sans-mono-latin-400-normal.woff2";
+  "https://fonts.bunny.net/jetbrains-mono/files/jetbrains-mono-latin-400-normal.woff2";
 
 const FORMAT_MAP = {
   png: "Png" as any,
@@ -80,6 +80,6 @@ export function renderOptions(code: string, opts: CodeToImageOptions) {
   const columns = Math.max(...code.split("\n").map((l) => l.length));
   const width = opts.width || (columns + 2) * 10;
   const height = opts.height || (lines + 2) * 20;
-  const format = FORMAT_MAP[opts.format || "png"] as any;
+  const format = FORMAT_MAP[opts.format || "webp"] as any;
   return { width, height, format };
 }
