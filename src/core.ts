@@ -1,6 +1,8 @@
 import { codeToContainer, renderOptions } from "./_utils";
 import type { CodeToImageCoreOptions, CodeToImageOptions } from "./types";
 
+export { loadFont } from "./_utils";
+
 export type { CodeToImageOptions } from "./types";
 
 export async function codeToImageCore(
