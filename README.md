@@ -9,10 +9,10 @@
 
 Convert code snippets into images. Powered by [shiki](https://github.com/shikijs/shiki) and [takumi](https://github.com/kane50613/takumi). Super fast 🚀
 
-**Example:** (generated in **~150ms**)
+**Example:**
 
 <p align="center">
-  <img src="./test/.snapshot/image.png" alt="Example output" />
+  <img src="./test/.snapshot/image.webp" alt="Example output" />
 </p>
 
 > [!NOTE]
@@ -26,9 +26,7 @@ import { codeToImage } from "shiki-image";
 
 const buffer = await codeToImage('console.log("hello, world!");', {
   lang: "js",
-  theme: "ayu-dark",
-  style: { borderRadius: 8 },
-  font: "https://fonts.bunny.net/ubuntu-sans-mono/files/ubuntu-sans-mono-latin-400-normal.woff2",
+  theme: "github-dark",
 });
 
 await writeFile("image.png", buffer);
@@ -50,11 +48,14 @@ Additional container styles. See [takumi stylesheets](https://takumi.kane.tw/doc
 
 ### `format`
 
-Output format can be either `png`, `webp` or `jpeg` (default is `png`).
+Output format can be either `png`, `webp` or `jpeg` (default is `webp`).
 
 ### `font`
 
 Font used to render the code. Can be either a string (remote URL to fetch) or an ArrayBuffer.
+
+> [!NOTE]
+> If no font is specified, it will be automatically downloaded from bunny.net/jetbrains-mono.
 
 > [!TIP]
 > If a URL is passed, response will be cached in memory for the next renders.
