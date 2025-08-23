@@ -12,7 +12,14 @@ export interface CodeToImageOptions {
   width?: number;
   height?: number;
   style?: PartialStyle;
+  format?: "png" | "webp" | "jpeg";
 }
+
+const FORMAT_MAP = {
+  png: "Png" as any,
+  webp: "WebP" as any,
+  jpeg: "Jpeg" as any,
+};
 
 export async function codeToImage(code: string, options: CodeToImageOptions) {
   const hl = await getSingletonHighlighter({
@@ -75,7 +82,7 @@ export async function codeToImage(code: string, options: CodeToImageOptions) {
   const height = options.height || (lines + 2) * 20;
 
   const res = await renderer.renderAsync(root, {
-    format: "Png" as any,
+    format: FORMAT_MAP[options.format || "png"] as any,
     width,
     height,
   });

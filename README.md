@@ -48,6 +48,10 @@ Rendering theme. See [shiki supported theems](https://shiki.style/themes).
 
 Additional container styles. See [takumi stylesheets](https://takumi.kane.tw/docs/deep-dives/stylesheets).
 
+### `format`
+
+Output format can be either `png`, `webp` or `jpeg` (default is `png`).
+
 ### `font`
 
 Font used to render the code. Can be either a string (remote URL to fetch) or an ArrayBuffer.
