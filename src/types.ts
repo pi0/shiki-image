@@ -17,8 +17,9 @@ export interface CodeToImageOptions {
   /**
    * Font used to render the code. Can be a remote URL (string) or an ArrayBuffer.
    * If a URL is passed, it will be cached in memory for next renders.
+   * If no font is provided, a default font will be downloaded from [bunny.net/ubuntu-sans-mono](https://fonts.bunny.net/ubuntu-sans-mono/files/ubuntu-sans-mono-latin-400-normal.woff2).
    */
-  font: string | ArrayBuffer;
+  font?: string | ArrayBuffer;
   /**
    * Rendering width. By default is computed as `(columns + 2) * 10`.
    */

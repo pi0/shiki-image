@@ -2,6 +2,9 @@ import type { ContainerNode } from "@takumi-rs/helpers";
 import { container, text, em, percentage } from "@takumi-rs/helpers";
 import type { CodeToImageCoreOptions, CodeToImageOptions } from "./types";
 
+const DEFAULT_FONT =
+  "https://fonts.bunny.net/ubuntu-sans-mono/files/ubuntu-sans-mono-latin-400-normal.woff2";
+
 const FORMAT_MAP = {
   png: "Png" as any,
   webp: "WebP" as any,
@@ -54,8 +57,11 @@ export function codeToContainer(
   return root;
 }
 
-export async function loadFont(font: string | ArrayBuffer) {
+export async function loadFont(font: string | ArrayBuffer | undefined) {
   let fontData: ArrayBuffer;
+  if (!font) {
+    font = DEFAULT_FONT;
+  }
   if (typeof font === "string") {
     const fontCache: Map<string, ArrayBuffer> = ((
       globalThis as any
