@@ -10,32 +10,50 @@ export interface CodeToImageOptions {
    * Code language. See shiki supported languages.
    */
   lang: BundledLanguage;
+
   /**
    * Rendering theme. See shiki supported themes.
    */
   theme: BundledTheme;
+
   /**
    * Font used to render the code. Can be a remote URL (string) or an ArrayBuffer.
+   *
    * If a URL is passed, it will be cached in memory for next renders.
-   * If no font is provided, a default font will be downloaded from [bunny.net/ubuntu-sans-mono](https://fonts.bunny.net/ubuntu-sans-mono/files/ubuntu-sans-mono-latin-400-normal.woff2).
+   *
+   *  If no font is specified, it will be automatically downloaded from bunny.net/jetbrains-mono.
    */
   font?: string | ArrayBuffer;
+
   /**
-   * Rendering width. By default is computed as `(columns + 2) * 10`.
+   * Font ratio used to compute the final font size. Default is `0.63`.
+   */
+  fontRatio?: number;
+
+  /**
+   * Rendering width. By default is computed as `columns * fontSize * fontRatio`.
+   *
+   * Default font size is `18` and can be customized using `style.fontSize`.
    */
   width?: number;
+
   /**
-   * Rendering height. By default is computed as `(lines + 2) * 20`.
+   * Rendering height. By default is computed as `lines * fontSize * lineHeight`.
+   *
+   * Default `lineHeight` is `1.3` and can be customized using `style.lineHeight`.
    */
   height?: number;
+
   /**
    * Additional container styles. See takumi stylesheets.
    */
   style?: PartialStyle;
+
   /**
-   * Output format: 'png', 'webp', or 'jpeg'. Default is 'png'.
+   * Output format: `png`, `webp`, or `jpeg`. Default is `webp`.
    */
   format?: "png" | "webp" | "jpeg";
+
   /**
    * Image quality between 0 and 100 (jpeg format only).
    */

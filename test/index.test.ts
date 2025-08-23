@@ -10,10 +10,11 @@ import { codeToImage } from "shiki-image";
 const buffer = await codeToImage('console.log("hello, world!");', {
   lang: "js",
   theme: "github-dark",
+  format: 'webp',
   style: { borderRadius: 4 },
 });
 
-await writeFile("image.png", buffer);
+await writeFile("image.webp", buffer);
 `;
 
 describe("shiki-image", () => {

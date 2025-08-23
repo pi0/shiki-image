@@ -5,6 +5,10 @@ import type { CodeToImageCoreOptions, CodeToImageOptions } from "./types";
 const DEFAULT_FONT =
   "https://fonts.bunny.net/jetbrains-mono/files/jetbrains-mono-latin-400-normal.woff2";
 
+const DEFAULT_FONT_SIZE = 18;
+const DEFAULT_FONT_RATIO = 0.63;
+const DEFAULT_LINE_HEIGHT = 1.3;
+
 const FORMAT_MAP = {
   png: "Png" as any,
   webp: "WebP" as any,
@@ -30,6 +34,8 @@ export function codeToContainer(
       width: percentage(100),
       height: percentage(100),
       padding: em(1),
+      fontSize: DEFAULT_FONT_SIZE,
+      lineHeight: DEFAULT_LINE_HEIGHT,
       ...opts.style,
     },
     children: tokens.map((line) =>
@@ -78,8 +84,17 @@ export async function loadFont(font: string | ArrayBuffer | undefined) {
 export function renderOptions(code: string, opts: CodeToImageOptions) {
   const lines = code.split("\n").length;
   const columns = Math.max(...code.split("\n").map((l) => l.length));
-  const width = opts.width || (columns + 2) * 10;
-  const height = opts.height || (lines + 2) * 20;
+
+  const fontRatio = opts?.fontRatio || DEFAULT_FONT_RATIO;
+  const fontSize =
+    Number.parseInt(opts.style?.fontSize as string) || DEFAULT_FONT_SIZE;
+  const lineHeight =
+    Number.parseInt(opts.style?.lineHeight as string) || DEFAULT_LINE_HEIGHT;
+
+  const width = opts.width || columns * (fontSize * fontRatio);
+  const height = opts.height || lines * (fontSize * lineHeight);
+
   const format = FORMAT_MAP[opts.format || "webp"] as any;
+
   return { width, height, format };
 }

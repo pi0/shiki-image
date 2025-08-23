@@ -27,9 +27,10 @@ import { codeToImage } from "shiki-image";
 const buffer = await codeToImage('console.log("hello, world!");', {
   lang: "js",
   theme: "github-dark",
+  format: "webp",
 });
 
-await writeFile("image.png", buffer);
+await writeFile("image.webp", buffer);
 ```
 
 ## Options
@@ -50,6 +51,10 @@ Additional container styles. See [takumi stylesheets](https://takumi.kane.tw/doc
 
 Output format can be either `png`, `webp` or `jpeg` (default is `webp`).
 
+### `quality`
+
+Image quality between `0` to `100` (jpeg format only)
+
 ### `font`
 
 Font used to render the code. Can be either a string (remote URL to fetch) or an ArrayBuffer.
@@ -60,17 +65,23 @@ Font used to render the code. Can be either a string (remote URL to fetch) or an
 > [!TIP]
 > If a URL is passed, response will be cached in memory for the next renders.
 
+### `fontRatio`
+
+Font ratio used to compute the final font size. Default is `0.63`.
+
 ### `width`
 
-Rendering width. By default is computed as `(columns + 2) * 10`.
+Rendering width. By default is computed as `columns * fontSize * fontRatio`.
+
+> [!NOTE]
+> Default font size is `18` and can be customized using `style.fontSize`.
 
 ### `height`
 
-Rendering height. By default is computed as `(lines + 2) * 20`.
+Rendering height. By default is computed as `lines * fontSize * lineHeight`.
 
-### `quality`
-
-Image quality between `0` to `100` (jpeg format only)
+> [!NOTE]
+> Default lineHeight is `1.3` and can be customized using `style.lineHeight`.
 
 ## Development
 
