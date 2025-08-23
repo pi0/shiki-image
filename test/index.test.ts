@@ -25,10 +25,12 @@ describe("shiki-image", () => {
       theme: "github-dark",
       style: { borderRadius: 4 },
     });
-    await writeFile(
-      fileURLToPath(new URL(".snapshot/image.webp", import.meta.url)),
-      img,
-    );
+    if (!process.env.CI) {
+      await writeFile(
+        fileURLToPath(new URL(".snapshot/image.webp", import.meta.url)),
+        img,
+      );
+    }
     const end = Date.now();
     console.log(`Image generated in ${end - start}ms`);
   });
