@@ -1,4 +1,4 @@
-import { describe, it } from "vitest";
+import { describe, expect, it } from "vitest";
 import { codeToImage } from "../src";
 import { writeFile } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
@@ -33,5 +33,15 @@ describe("shiki-image", () => {
     }
     const end = Date.now();
     console.log(`Image generated in ${end - start}ms`);
+  });
+
+  it("faild when url returned 404", async () => {
+    await expect(
+      codeToImage(exampleCode, {
+        lang: "js",
+        theme: "github-dark",
+        font: "https://httpbin.org/status/404",
+      }),
+    ).rejects.toThrowError;
   });
 });

@@ -72,12 +72,20 @@ export async function loadFont(font: string | ArrayBuffer | undefined) {
     const fontCache: Map<string, ArrayBuffer> = ((
       globalThis as any
     ).__shikiImageFontCache__ ||= new Map());
-    fontData =
-      fontCache.get(font) || (await fetch(font).then((r) => r.arrayBuffer()));
-    fontCache.set(font, fontData);
-  } else {
-    fontData = font;
+    const cachedFont = fontCache.get(font);
+    if (cachedFont) {
+      fontData = cachedFont;
+    } else {
+      const res = await fetch(font);
+      if (!res.ok) {
+        throw new Error(`Failed to load font: ${res.status} ${res.statusText}`);
+      }
+      fontData = await res.arrayBuffer();
+      fontCache.set(font, fontData);
+    }
+    return fontData;
   }
+  fontData = font;
   return fontData;
 }
 
