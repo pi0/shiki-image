@@ -8,17 +8,17 @@ importers:
   .:
     dependencies:
       "@takumi-rs/core":
-        specifier: ^0.27.2
-        version: 0.27.2
+        specifier: ^0.27.6
+        version: 0.27.6
       "@takumi-rs/helpers":
-        specifier: ^0.27.2
-        version: 0.27.2
+        specifier: ^0.27.6
+        version: 0.27.6
       shiki:
-        specifier: ^3.11.0
-        version: 3.11.0
+        specifier: ^3.12.0
+        version: 3.12.0
     devDependencies:
       "@types/node":
-        specifier: ^24.2.1
+        specifier: ^24.3.0
         version: 24.3.0
       "@vitest/coverage-v8":
         specifier: ^3.2.4
@@ -1325,40 +1325,40 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  "@shikijs/core@3.11.0":
+  "@shikijs/core@3.12.0":
     resolution:
       {
-        integrity: sha512-oJwU+DxGqp6lUZpvtQgVOXNZcVsirN76tihOLBmwILkKuRuwHteApP8oTXmL4tF5vS5FbOY0+8seXmiCoslk4g==,
+        integrity: sha512-rPfCBd6gHIKBPpf2hKKWn2ISPSrmRKAFi+bYDjvZHpzs3zlksWvEwaF3Z4jnvW+xHxSRef7qDooIJkY0RpA9EA==,
       }
 
-  "@shikijs/engine-javascript@3.11.0":
+  "@shikijs/engine-javascript@3.12.0":
     resolution:
       {
-        integrity: sha512-6/ov6pxrSvew13k9ztIOnSBOytXeKs5kfIR7vbhdtVRg+KPzvp2HctYGeWkqv7V6YIoLicnig/QF3iajqyElZA==,
+        integrity: sha512-Ni3nm4lnKxyKaDoXQQJYEayX052BL7D0ikU5laHp+ynxPpIF1WIwyhzrMU6WDN7AoAfggVR4Xqx3WN+JTS+BvA==,
       }
 
-  "@shikijs/engine-oniguruma@3.11.0":
+  "@shikijs/engine-oniguruma@3.12.0":
     resolution:
       {
-        integrity: sha512-4DwIjIgETK04VneKbfOE4WNm4Q7WC1wo95wv82PoHKdqX4/9qLRUwrfKlmhf0gAuvT6GHy0uc7t9cailk6Tbhw==,
+        integrity: sha512-IfDl3oXPbJ/Jr2K8mLeQVpnF+FxjAc7ZPDkgr38uEw/Bg3u638neSrpwqOTnTHXt1aU0Fk1/J+/RBdst1kVqLg==,
       }
 
-  "@shikijs/langs@3.11.0":
+  "@shikijs/langs@3.12.0":
     resolution:
       {
-        integrity: sha512-Njg/nFL4HDcf/ObxcK2VeyidIq61EeLmocrwTHGGpOQx0BzrPWM1j55XtKQ1LvvDWH15cjQy7rg96aJ1/l63uw==,
+        integrity: sha512-HIca0daEySJ8zuy9bdrtcBPhcYBo8wR1dyHk1vKrOuwDsITtZuQeGhEkcEfWc6IDyTcom7LRFCH6P7ljGSCEiQ==,
       }
 
-  "@shikijs/themes@3.11.0":
+  "@shikijs/themes@3.12.0":
     resolution:
       {
-        integrity: sha512-BhhWRzCTEk2CtWt4S4bgsOqPJRkapvxdsifAwqP+6mk5uxboAQchc0etiJ0iIasxnMsb764qGD24DK9albcU9Q==,
+        integrity: sha512-/lxvQxSI5s4qZLV/AuFaA4Wt61t/0Oka/P9Lmpr1UV+HydNCczO3DMHOC/CsXCCpbv4Zq8sMD0cDa7mvaVoj0Q==,
       }
 
-  "@shikijs/types@3.11.0":
+  "@shikijs/types@3.12.0":
     resolution:
       {
-        integrity: sha512-RB7IMo2E7NZHyfkqAuaf4CofyY8bPzjWPjJRzn6SEak3b46fIQyG6Vx5fG/obqkfppQ+g8vEsiD7Uc6lqQt32Q==,
+        integrity: sha512-jsFzm8hCeTINC3OCmTZdhR9DOl/foJWplH2Px0bTi4m8z59fnsueLsweX82oGcjRQ7mfQAluQYKGoH2VzsWY4A==,
       }
 
   "@shikijs/vscode-textmate@10.0.2":
@@ -1367,10 +1367,10 @@ packages:
         integrity: sha512-83yeghZ2xxin3Nj8z1NMd/NCuca+gsYXswywDy5bHvwlWL8tpTQmzGeUuHd9FC3E/SBEMvzJRwWEOz5gGes9Qg==,
       }
 
-  "@takumi-rs/core-darwin-arm64@0.27.2":
+  "@takumi-rs/core-darwin-arm64@0.27.6":
     resolution:
       {
-        integrity: sha512-E2hEKljOM15Z7HIwkWvA1wwJWZitOT8m3So3Vdc3vY03+Q26zWZ7oKXNqsocJTTPsVtm0EFh2aOA/KDfu+oVNg==,
+        integrity: sha512-zsvh3vI4DMeiNmZL1BkH9lxGu90Ef7nFjAuNbuOZvp6r1a5gp7ozXDHTUjYF8KEMqhSvynuKx+4qdMw6gP/f8g==,
       }
     engines:
       {
@@ -1379,10 +1379,10 @@ packages:
     cpu: [arm64]
     os: [darwin]
 
-  "@takumi-rs/core-linux-arm64-gnu@0.27.2":
+  "@takumi-rs/core-linux-arm64-gnu@0.27.6":
     resolution:
       {
-        integrity: sha512-X5DCnH/1AQVE4Lq5F+titCnW3crG7MKtnpVgUEXM8i2NSF3/pYILESeM//3p9yr19gi7FSCGWZ6uqJs3QhViaQ==,
+        integrity: sha512-HAYrE0Mtmw41MS+ONayxPy/qzUTVNPpy4DslskTnB/Y+tu3ur6Zda1VUY87qU/e+oif2xKtY1XYxnR35NcnHNA==,
       }
     engines:
       {
@@ -1391,10 +1391,10 @@ packages:
     cpu: [arm64]
     os: [linux]
 
-  "@takumi-rs/core-linux-arm64-musl@0.27.2":
+  "@takumi-rs/core-linux-arm64-musl@0.27.6":
     resolution:
       {
-        integrity: sha512-X0EuWHDRtdgPxwPO/gKm+/Wm55ibh/BZbXz1uj/pOeP2+73uYzFm9LsX200GIEm5DrX6QSpeflrMvnWI/wCENw==,
+        integrity: sha512-1H55q8akewVUAKDgpuZA8AQJCPOdYSJH0WjKPbZAUF9IOvLtufzf4ajuL3AqiPEluwULUM+5MJZhQsAIDZEumQ==,
       }
     engines:
       {
@@ -1403,10 +1403,10 @@ packages:
     cpu: [arm64]
     os: [linux]
 
-  "@takumi-rs/core-linux-x64-gnu@0.27.2":
+  "@takumi-rs/core-linux-x64-gnu@0.27.6":
     resolution:
       {
-        integrity: sha512-NqCb2B9plqCO+qUmcagtchCDE+OtMVmwJlgwsWSAxXLxdRXPxUoIR1GRp2rey2nLtLjk+sbtGI466fT88pZ+kg==,
+        integrity: sha512-P6ZMdVH5AmsP0Q7cszBEbV+yk4Uo7c8cOZas1sxgYVorRF06lzCaI0Y6uDOx+WBMmfNy7z/y4hR8y9wRAMYjzQ==,
       }
     engines:
       {
@@ -1415,10 +1415,10 @@ packages:
     cpu: [x64]
     os: [linux]
 
-  "@takumi-rs/core-linux-x64-musl@0.27.2":
+  "@takumi-rs/core-linux-x64-musl@0.27.6":
     resolution:
       {
-        integrity: sha512-13qygidU9cptVX1PPc7iTXHGpo5Bb54pIE0P52z+dbziu4wTvEYJAWIinVfXAoE0i09uaihDLX5qaDBJB7mZ3Q==,
+        integrity: sha512-vBohKBfhEn7LCBEP0FCFq0aoPWEqILbmezvGseZDt28vGEHvn+t1WuSl/0keRUqDTK0VvjIXlutPZai5RgHGFg==,
       }
     engines:
       {
@@ -1427,10 +1427,10 @@ packages:
     cpu: [x64]
     os: [linux]
 
-  "@takumi-rs/core-win32-arm64-msvc@0.27.2":
+  "@takumi-rs/core-win32-arm64-msvc@0.27.6":
     resolution:
       {
-        integrity: sha512-2yvTsYUzcFdHpYq/JqpIDgsCUXnjUoljgeu5WhOlU1h+cZShgOb/8h+Vo0LSziPO9fgmxD0BI8RfhauRKMYwAA==,
+        integrity: sha512-o/742yECVRLBGu8KC294wWkO/6QWsZf9bmjveiUVIeXkVnOrCJ5uEIojvgXaXvmCs2EoiZk5BkLx8df4z3S1YA==,
       }
     engines:
       {
@@ -1439,10 +1439,10 @@ packages:
     cpu: [arm64]
     os: [win32]
 
-  "@takumi-rs/core-win32-x64-msvc@0.27.2":
+  "@takumi-rs/core-win32-x64-msvc@0.27.6":
     resolution:
       {
-        integrity: sha512-MfhcQebn8hOWwQdMwfWzznLvMThJmurR2em9llVYaNDDcbiogAFiA4yXk8uqBIy2BZHihLb6SBhqE4NFB0Rw5w==,
+        integrity: sha512-eh+ffeu4r7BsQ3KMtCR6hJ3/DaslZKreQmkzJm1WgqvAB8NyUrRkixTci/N0ADaAAeY1iqnkmu1HxBiQIXGQow==,
       }
     engines:
       {
@@ -1451,20 +1451,20 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  "@takumi-rs/core@0.27.2":
+  "@takumi-rs/core@0.27.6":
     resolution:
       {
-        integrity: sha512-yWI06aR3EMGDixB7rysL16V8UiDJ36BIvwRCb4e1BM3jaJ5oVQOIBQO8wYMyfjENH96ken4IO50uavwxTHuesg==,
+        integrity: sha512-NldTRYuoRnslrysNRCJn4TM0c2PUz7TM6lwhL4aGI1FVRJvSz6eSUyD85wgRSNvWBfGg5zxQ0MhB6kAVohxUTw==,
       }
     engines:
       {
         node: ">= 12.22.0 < 13 || >= 14.17.0 < 15 || >= 15.12.0 < 16 || >= 16.0.0",
       }
 
-  "@takumi-rs/helpers@0.27.2":
+  "@takumi-rs/helpers@0.27.6":
     resolution:
       {
-        integrity: sha512-1EAybS4waIrSG4Mg0D2819Ze9GeWDK+CFg1olb0aaLgwUTh206jsYVUf4M5TnZ7ySKR2C7k3T2wfC3nKU+y7XQ==,
+        integrity: sha512-lZSEs4FUrTOopEiX642O1jdxhLLFlMWReMiTUQbbTU0+TViahP18ORGPKpaUEUltJRSyXsEVye0hJ2Ba8MPQpg==,
       }
     peerDependencies:
       react-dom: ^19.0.0
@@ -3310,10 +3310,10 @@ packages:
       }
     engines: { node: ">=8" }
 
-  shiki@3.11.0:
+  shiki@3.12.0:
     resolution:
       {
-        integrity: sha512-VgKumh/ib38I1i3QkMn6mAQA6XjjQubqaAYhfge71glAll0/4xnt8L2oSuC45Qcr/G5Kbskj4RliMQddGmy/Og==,
+        integrity: sha512-E+ke51tciraTHpaXYXfqnPZFSViKHhSQ3fiugThlfs/om/EonlQ0hSldcqgzOWWqX6PcjkKKzFgrjIaiPAXoaA==,
       }
 
   siginfo@2.0.0:
@@ -4278,71 +4278,71 @@ snapshots:
   "@rollup/rollup-win32-x64-msvc@4.47.1":
     optional: true
 
-  "@shikijs/core@3.11.0":
+  "@shikijs/core@3.12.0":
     dependencies:
-      "@shikijs/types": 3.11.0
+      "@shikijs/types": 3.12.0
       "@shikijs/vscode-textmate": 10.0.2
       "@types/hast": 3.0.4
       hast-util-to-html: 9.0.5
 
-  "@shikijs/engine-javascript@3.11.0":
+  "@shikijs/engine-javascript@3.12.0":
     dependencies:
-      "@shikijs/types": 3.11.0
+      "@shikijs/types": 3.12.0
       "@shikijs/vscode-textmate": 10.0.2
       oniguruma-to-es: 4.3.3
 
-  "@shikijs/engine-oniguruma@3.11.0":
+  "@shikijs/engine-oniguruma@3.12.0":
     dependencies:
-      "@shikijs/types": 3.11.0
+      "@shikijs/types": 3.12.0
       "@shikijs/vscode-textmate": 10.0.2
 
-  "@shikijs/langs@3.11.0":
+  "@shikijs/langs@3.12.0":
     dependencies:
-      "@shikijs/types": 3.11.0
+      "@shikijs/types": 3.12.0
 
-  "@shikijs/themes@3.11.0":
+  "@shikijs/themes@3.12.0":
     dependencies:
-      "@shikijs/types": 3.11.0
+      "@shikijs/types": 3.12.0
 
-  "@shikijs/types@3.11.0":
+  "@shikijs/types@3.12.0":
     dependencies:
       "@shikijs/vscode-textmate": 10.0.2
       "@types/hast": 3.0.4
 
   "@shikijs/vscode-textmate@10.0.2": {}
 
-  "@takumi-rs/core-darwin-arm64@0.27.2":
+  "@takumi-rs/core-darwin-arm64@0.27.6":
     optional: true
 
-  "@takumi-rs/core-linux-arm64-gnu@0.27.2":
+  "@takumi-rs/core-linux-arm64-gnu@0.27.6":
     optional: true
 
-  "@takumi-rs/core-linux-arm64-musl@0.27.2":
+  "@takumi-rs/core-linux-arm64-musl@0.27.6":
     optional: true
 
-  "@takumi-rs/core-linux-x64-gnu@0.27.2":
+  "@takumi-rs/core-linux-x64-gnu@0.27.6":
     optional: true
 
-  "@takumi-rs/core-linux-x64-musl@0.27.2":
+  "@takumi-rs/core-linux-x64-musl@0.27.6":
     optional: true
 
-  "@takumi-rs/core-win32-arm64-msvc@0.27.2":
+  "@takumi-rs/core-win32-arm64-msvc@0.27.6":
     optional: true
 
-  "@takumi-rs/core-win32-x64-msvc@0.27.2":
+  "@takumi-rs/core-win32-x64-msvc@0.27.6":
     optional: true
 
-  "@takumi-rs/core@0.27.2":
+  "@takumi-rs/core@0.27.6":
     optionalDependencies:
-      "@takumi-rs/core-darwin-arm64": 0.27.2
-      "@takumi-rs/core-linux-arm64-gnu": 0.27.2
-      "@takumi-rs/core-linux-arm64-musl": 0.27.2
-      "@takumi-rs/core-linux-x64-gnu": 0.27.2
-      "@takumi-rs/core-linux-x64-musl": 0.27.2
-      "@takumi-rs/core-win32-arm64-msvc": 0.27.2
-      "@takumi-rs/core-win32-x64-msvc": 0.27.2
+      "@takumi-rs/core-darwin-arm64": 0.27.6
+      "@takumi-rs/core-linux-arm64-gnu": 0.27.6
+      "@takumi-rs/core-linux-arm64-musl": 0.27.6
+      "@takumi-rs/core-linux-x64-gnu": 0.27.6
+      "@takumi-rs/core-linux-x64-musl": 0.27.6
+      "@takumi-rs/core-win32-arm64-msvc": 0.27.6
+      "@takumi-rs/core-win32-x64-msvc": 0.27.6
 
-  "@takumi-rs/helpers@0.27.2": {}
+  "@takumi-rs/helpers@0.27.6": {}
 
   "@tybys/wasm-util@0.10.0":
     dependencies:
@@ -5577,14 +5577,14 @@ snapshots:
 
   shebang-regex@3.0.0: {}
 
-  shiki@3.11.0:
+  shiki@3.12.0:
     dependencies:
-      "@shikijs/core": 3.11.0
-      "@shikijs/engine-javascript": 3.11.0
-      "@shikijs/engine-oniguruma": 3.11.0
-      "@shikijs/langs": 3.11.0
-      "@shikijs/themes": 3.11.0
-      "@shikijs/types": 3.11.0
+      "@shikijs/core": 3.12.0
+      "@shikijs/engine-javascript": 3.12.0
+      "@shikijs/engine-oniguruma": 3.12.0
+      "@shikijs/langs": 3.12.0
+      "@shikijs/themes": 3.12.0
+      "@shikijs/types": 3.12.0
       "@shikijs/vscode-textmate": 10.0.2
       "@types/hast": 3.0.4
 
