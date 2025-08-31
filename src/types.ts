@@ -1,6 +1,7 @@
 import type { BundledLanguage, BundledTheme, HighlighterCore } from "shiki";
 import type { PartialStyle } from "@takumi-rs/helpers";
 import type { Renderer as NativeRenderer } from "@takumi-rs/core";
+import type { OutputFormat } from "@takumi-rs/core";
 
 /**
  * Options for rendering code to image.
@@ -52,7 +53,7 @@ export interface CodeToImageOptions {
   /**
    * Output format: `png`, `webp`, or `jpeg`. Default is `webp`.
    */
-  format?: "png" | "webp" | "jpeg";
+  format?: OutputFormat;
 
   /**
    * Image quality between 0 and 100 (jpeg format only).
