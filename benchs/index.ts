@@ -28,7 +28,7 @@ const renderer = new Renderer({
 });
 
 bench("Takumi with default options", async () => {
-  // to make the benchmark more fair, 
+  // to make the benchmark more fair,
   // we purge the font rasterization/shaping cache before every run
   renderer.purgeFontCache();
 
