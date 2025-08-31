@@ -88,7 +88,7 @@ export function renderOptions(code: string, opts: CodeToImageOptions) {
   const width = opts.width || columns * (fontSize * fontRatio);
   const height = opts.height || lines * (fontSize * lineHeight);
 
-  const format = opts.format || "webp" as const;
+  const format = opts.format || ("webp" as const);
 
   return { width, height, format };
 }
