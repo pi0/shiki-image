@@ -97,6 +97,10 @@ Rendering height. By default is computed as `lines * fontSize * lineHeight`.
 
 </details>
 
+## Showcase
+
+- [Alekhya](https://github.com/jd-solanki/alekhya): Code image generator with API support
+
 ## License
 
 Published under the [MIT](https://github.com/unjs/shiki-image/blob/main/LICENSE) license.
