@@ -9,12 +9,6 @@ const DEFAULT_FONT_SIZE = 18;
 const DEFAULT_FONT_RATIO = 0.63;
 const DEFAULT_LINE_HEIGHT = 1.3;
 
-const FORMAT_MAP = {
-  png: "Png" as any,
-  webp: "WebP" as any,
-  jpeg: "Jpeg" as any,
-};
-
 export function codeToContainer(
   code: string,
   opts: CodeToImageOptions,
@@ -64,19 +58,22 @@ export function codeToContainer(
 }
 
 export async function loadFont(font: string | ArrayBuffer | undefined) {
-  let fontData: ArrayBuffer;
+  let fontData: Buffer;
   if (!font) {
     font = DEFAULT_FONT;
   }
   if (typeof font === "string") {
-    const fontCache: Map<string, ArrayBuffer> = ((
+    const fontCache: Map<string, Buffer> = ((
       globalThis as any
     ).__shikiImageFontCache__ ||= new Map());
     fontData =
-      fontCache.get(font) || (await fetch(font).then((r) => r.arrayBuffer()));
+      fontCache.get(font) ||
+      (await fetch(font)
+        .then((r) => r.arrayBuffer())
+        .then(Buffer.from));
     fontCache.set(font, fontData);
   } else {
-    fontData = font;
+    fontData = Buffer.from(font);
   }
   return fontData;
 }
@@ -94,7 +91,7 @@ export function renderOptions(code: string, opts: CodeToImageOptions) {
   const width = opts.width || columns * (fontSize * fontRatio);
   const height = opts.height || lines * (fontSize * lineHeight);
 
-  const format = FORMAT_MAP[opts.format || "webp"] as any;
+  const format = opts.format || ("webp" as const);
 
   return { width, height, format };
 }
