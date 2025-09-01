@@ -26,9 +26,9 @@
     "test:types": "tsc --noEmit --skipLibCheck"
   },
   "dependencies": {
-    "@takumi-rs/core": "^0.28.4",
-    "@takumi-rs/helpers": "^0.28.4",
-    "shiki": "^3.12.0"
+    "@takumi-rs/core": "^0.28.5",
+    "@takumi-rs/helpers": "^0.28.5",
+    "shiki": "^3.12.1"
   },
   "devDependencies": {
     "@types/node": "^24.3.0",
@@ -43,5 +43,5 @@
     "typescript": "^5.9.2",
     "vitest": "^3.2.4"
   },
-  "packageManager": "pnpm@10.14.0"
+  "packageManager": "pnpm@10.15.1"
 }
