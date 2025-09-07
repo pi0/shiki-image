@@ -75,10 +75,12 @@ export async function loadFont(font: string | ArrayBuffer | Buffer) {
 
   if (font instanceof ArrayBuffer) {
     fontData = Buffer.from(font);
+    return fontData;
   }
 
   if (font instanceof Buffer) {
     fontData = font;
+    return fontData;
   }
 
   throw new Error(
