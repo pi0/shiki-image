@@ -22,7 +22,7 @@ export interface CodeToImageOptions {
    *
    * If a URL is passed, it will be cached in memory for next renders.
    *
-   *  If no font is specified, it will be automatically downloaded from bunny.net/jetbrains-mono.
+   * If no font is specified, it will use the builtin `Geist Mono` font from Takumi.
    */
   font?: string | ArrayBuffer;
 
@@ -51,7 +51,7 @@ export interface CodeToImageOptions {
   style?: PartialStyle;
 
   /**
-   * Output format: `png`, `webp`, or `jpeg`. Default is `webp`.
+   * Output format: `png`, `webp`, `avif`, or `jpeg`. Default is `webp`.
    */
   format?: OutputFormat;
 
