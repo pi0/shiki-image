@@ -12,7 +12,7 @@ export async function codeToImage(code: string, options: CodeToImageOptions) {
     themes: [options.theme],
     langs: [options.lang],
   });
-  const fontData = await loadFont(options.font);
-  const renderer = new Renderer({ fonts: [fontData] });
+  const fonts = options.font ? [await loadFont(options.font)] : undefined;
+  const renderer = new Renderer({ fonts });
   return codeToImageCore(code, options, { highlighter, renderer });
 }

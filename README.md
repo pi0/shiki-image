@@ -49,7 +49,7 @@ Additional container styles. See [takumi stylesheets](https://takumi.kane.tw/doc
 
 ### `format`
 
-Output format can be either `png`, `webp` or `jpeg` (default is `webp`).
+Output format can be either `png`, `webp`, `avif`, or `jpeg` (default is `webp`).
 
 ### `quality`
 
@@ -60,7 +60,7 @@ Image quality between `0` to `100` (jpeg format only)
 Font used to render the code. Can be either a string (remote URL to fetch) or an ArrayBuffer.
 
 > [!NOTE]
-> If no font is specified, it will be automatically downloaded from bunny.net/jetbrains-mono.
+> If no font is specified, it will use the builtin `Geist Mono` font from Takumi.
 
 > [!TIP]
 > If a URL is passed, response will be cached in memory for the next renders.
@@ -96,6 +96,11 @@ Rendering height. By default is computed as `lines * fontSize * lineHeight`.
 - Run interactive tests using `pnpm dev`
 
 </details>
+
+## Showcase
+
+- [Alekhya](https://github.com/jd-solanki/alekhya): Code image generator with API support
+- [Modern Monaco Demo](https://github.com/pi0/modern-monaco-demo): Uses shiki-image to generate [og image](https://modern-monaco-demo.vercel.app/og).
 
 ## License
 

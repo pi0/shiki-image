@@ -1,6 +1,7 @@
 import type { BundledLanguage, BundledTheme, HighlighterCore } from "shiki";
 import type { PartialStyle } from "@takumi-rs/helpers";
 import type { Renderer as NativeRenderer } from "@takumi-rs/core";
+import type { OutputFormat } from "@takumi-rs/core";
 
 /**
  * Options for rendering code to image.
@@ -21,7 +22,7 @@ export interface CodeToImageOptions {
    *
    * If a URL is passed, it will be cached in memory for next renders.
    *
-   *  If no font is specified, it will be automatically downloaded from bunny.net/jetbrains-mono.
+   * If no font is specified, it will use the builtin `Geist Mono` font from Takumi.
    */
   font?: string | ArrayBuffer;
 
@@ -50,9 +51,9 @@ export interface CodeToImageOptions {
   style?: PartialStyle;
 
   /**
-   * Output format: `png`, `webp`, or `jpeg`. Default is `webp`.
+   * Output format: `png`, `webp`, `avif`, or `jpeg`. Default is `webp`.
    */
-  format?: "png" | "webp" | "jpeg";
+  format?: OutputFormat;
 
   /**
    * Image quality between 0 and 100 (jpeg format only).
