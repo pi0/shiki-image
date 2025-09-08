@@ -40,10 +40,10 @@ describe("shiki-image", () => {
       codeToImage(exampleCode, {
         lang: "js",
         theme: "github-dark",
-        font: "https://httpbin.org/status/404",
+        font: "https://www.google.com/404",
       }),
     ).rejects.toThrowError(
-      "Failed to load font from https://httpbin.org/status/404: 404 NOT FOUND",
+      "Font fetch failed (404 Not Found): https://www.google.com/404",
     );
   });
 });

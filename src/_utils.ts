@@ -70,7 +70,7 @@ export async function loadFont(font: string | ArrayBuffer | Buffer) {
       const res = await fetch(font);
       if (!res.ok) {
         throw new Error(
-          `Failed to load font from ${font}: ${res.status} ${res.statusText}`,
+          `Font fetch failed (${res.status} ${res.statusText}): ${font}`,
         );
       }
       fontData = await res.arrayBuffer();
