@@ -25,17 +25,15 @@ describe("shiki-image", () => {
       theme: "github-dark",
       style: { borderRadius: 4 },
     });
-    if (!process.env.CI) {
-      await writeFile(
-        fileURLToPath(new URL(".snapshot/image.webp", import.meta.url)),
-        img,
-      );
-    }
+    await writeFile(
+      fileURLToPath(new URL(".snapshot/image.webp", import.meta.url)),
+      img,
+    );
     const end = Date.now();
     console.log(`Image generated in ${end - start}ms`);
   });
 
-  it("faild when url returned 404", async () => {
+  it("failed when url returned 404", async () => {
     await expect(
       codeToImage(exampleCode, {
         lang: "js",
