@@ -100,6 +100,7 @@ Rendering height. By default is computed as `lines * fontSize * lineHeight`.
 ## Showcase
 
 - [Alekhya](https://github.com/jd-solanki/alekhya): Code image generator with API support
+- [Modern Monaco Demo](https://github.com/pi0/modern-monaco-demo): Uses shiki-image to generate [og image](https://modern-monaco-demo.vercel.app/og).
 
 ## License
 
