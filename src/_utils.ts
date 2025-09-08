@@ -2,18 +2,9 @@ import type { ContainerNode } from "@takumi-rs/helpers";
 import { container, text, em, percentage } from "@takumi-rs/helpers";
 import type { CodeToImageCoreOptions, CodeToImageOptions } from "./types";
 
-const DEFAULT_FONT =
-  "https://fonts.bunny.net/jetbrains-mono/files/jetbrains-mono-latin-400-normal.woff2";
-
 const DEFAULT_FONT_SIZE = 18;
 const DEFAULT_FONT_RATIO = 0.63;
 const DEFAULT_LINE_HEIGHT = 1.3;
-
-const FORMAT_MAP = {
-  png: "Png" as any,
-  webp: "WebP" as any,
-  jpeg: "Jpeg" as any,
-};
 
 export function codeToContainer(
   code: string,
@@ -36,6 +27,7 @@ export function codeToContainer(
       padding: em(1),
       fontSize: DEFAULT_FONT_SIZE,
       lineHeight: DEFAULT_LINE_HEIGHT,
+      fontFamily: "monospace",
       ...opts.style,
     },
     children: tokens.map((line) =>
@@ -63,30 +55,43 @@ export function codeToContainer(
   return root;
 }
 
-export async function loadFont(font: string | ArrayBuffer | undefined) {
-  let fontData: ArrayBuffer;
-  if (!font) {
-    font = DEFAULT_FONT;
-  }
+export async function loadFont(font: string | ArrayBuffer | Buffer) {
+  let fontData: ArrayBuffer | Buffer;
+
   if (typeof font === "string") {
-    const fontCache: Map<string, ArrayBuffer> = ((
+    const fontCache: Map<string, ArrayBuffer | Buffer> = ((
       globalThis as any
     ).__shikiImageFontCache__ ||= new Map());
+
     const cachedFont = fontCache.get(font);
     if (cachedFont) {
       fontData = cachedFont;
     } else {
       const res = await fetch(font);
       if (!res.ok) {
-        throw new Error(`Failed to load font: ${res.status} ${res.statusText}`);
+        throw new Error(
+          `Failed to load font from ${font}: ${res.status} ${res.statusText}`,
+        );
       }
       fontData = await res.arrayBuffer();
       fontCache.set(font, fontData);
     }
     return fontData;
   }
-  fontData = font;
-  return fontData;
+
+  if (font instanceof ArrayBuffer) {
+    fontData = Buffer.from(font);
+    return fontData;
+  }
+
+  if (font instanceof Buffer) {
+    fontData = font;
+    return fontData;
+  }
+
+  throw new Error(
+    "Invalid font type. Expected a string, ArrayBuffer, or Buffer",
+  );
 }
 
 export function renderOptions(code: string, opts: CodeToImageOptions) {
@@ -99,10 +104,10 @@ export function renderOptions(code: string, opts: CodeToImageOptions) {
   const lineHeight =
     Number.parseInt(opts.style?.lineHeight as string) || DEFAULT_LINE_HEIGHT;
 
-  const width = opts.width || columns * (fontSize * fontRatio);
-  const height = opts.height || lines * (fontSize * lineHeight);
+  const width = opts.width || (columns + 2) * (fontSize * fontRatio);
+  const height = opts.height || (lines + 2) * (fontSize * lineHeight);
 
-  const format = FORMAT_MAP[opts.format || "webp"] as any;
+  const format = opts.format || ("webp" as const);
 
   return { width, height, format };
 }
