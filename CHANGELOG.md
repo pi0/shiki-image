@@ -6,7 +6,7 @@
 
 ### 🚀 Enhancements
 
-- Update `takumi` and  use builtin `Geist Mono` font ([#9](https://github.com/pi0/shiki-image/pull/9))
+- Update `takumi` and use builtin `Geist Mono` font ([#9](https://github.com/pi0/shiki-image/pull/9))
 
 ### 🩹 Fixes
 
