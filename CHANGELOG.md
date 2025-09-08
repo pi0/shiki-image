@@ -1,5 +1,46 @@
 # Changelog
 
+## v0.1.4
+
+[compare changes](https://github.com/pi0/shiki-image/compare/v0.1.3...v0.1.4)
+
+### 🚀 Enhancements
+
+- Update `takumi` and  use builtin `Geist Mono` font ([#9](https://github.com/pi0/shiki-image/pull/9))
+
+### 🩹 Fixes
+
+- Quick fix for small code rendering ([696d3b0](https://github.com/pi0/shiki-image/commit/696d3b0))
+
+### 💅 Refactors
+
+- Improve font fetch with error handling ([#5](https://github.com/pi0/shiki-image/pull/5))
+
+### 🏡 Chore
+
+- Apply automated updates ([198d3f9](https://github.com/pi0/shiki-image/commit/198d3f9))
+- Add benchmark script ([0241d82](https://github.com/pi0/shiki-image/commit/0241d82))
+- Apply automated updates ([aaf37bb](https://github.com/pi0/shiki-image/commit/aaf37bb))
+- Update Takumi ([29fb0d6](https://github.com/pi0/shiki-image/commit/29fb0d6))
+- Apply automated updates ([2d95b1a](https://github.com/pi0/shiki-image/commit/2d95b1a))
+- Update Takumi ([29005e5](https://github.com/pi0/shiki-image/commit/29005e5))
+- Apply automated updates ([656855d](https://github.com/pi0/shiki-image/commit/656855d))
+- **release:** V0.1.3 ([e612ca8](https://github.com/pi0/shiki-image/commit/e612ca8))
+- Add `Alekhya` to showcase ([#3](https://github.com/pi0/shiki-image/pull/3))
+- Add modern-monaco-demo to showcase ([d23ce8f](https://github.com/pi0/shiki-image/commit/d23ce8f))
+
+### ✅ Tests
+
+- Update snapshot ([7367cdf](https://github.com/pi0/shiki-image/commit/7367cdf))
+- Allow update snapshot in ci ([8417fd5](https://github.com/pi0/shiki-image/commit/8417fd5))
+
+### ❤️ Contributors
+
+- Pooya Parsa ([@pi0](https://github.com/pi0))
+- Reyalka ([@reyalka](https://github.com/reyalka))
+- JD Solanki <jdsolanki0001@gmail.com>
+- Kane Wang ([@yeecord](https://github.com/yeecord))
+
 ## v0.1.3
 
 [compare changes](https://github.com/pi0/shiki-image/compare/v0.1.2...v0.1.3)
