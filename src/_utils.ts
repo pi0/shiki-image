@@ -56,20 +56,26 @@ export function codeToContainer(
 }
 
 export async function loadFont(font: string | ArrayBuffer | Buffer) {
-  let fontData: Buffer;
+  let fontData: Buffer | ArrayBuffer;
 
   if (typeof font === "string") {
-    const fontCache: Map<string, Buffer> = ((
+    const fontCache: Map<string, Buffer | ArrayBuffer> = ((
       globalThis as any
     ).__shikiImageFontCache__ ||= new Map());
 
-    fontData =
-      fontCache.get(font) ||
-      (await fetch(font)
-        .then((r) => r.arrayBuffer())
-        .then(Buffer.from));
-    fontCache.set(font, fontData);
-
+    const cachedFont = fontCache.get(font);
+    if (cachedFont) {
+      fontData = cachedFont;
+    } else {
+      const res = await fetch(font);
+      if (!res.ok) {
+        throw new Error(
+          `Font fetch failed (${res.status} ${res.statusText}): ${font}`,
+        );
+      }
+      fontData = await res.arrayBuffer();
+      fontCache.set(font, fontData);
+    }
     return fontData;
   }
 
