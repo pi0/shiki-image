@@ -42,6 +42,8 @@ describe("shiki-image", () => {
         theme: "github-dark",
         font: "https://httpbin.org/status/404",
       }),
-    ).rejects.toThrowError("Failed to load font: 404 NOT FOUND");
+    ).rejects.toThrowError(
+      "Failed to load font from https://httpbin.org/status/404: 404 NOT FOUND",
+    );
   });
 });

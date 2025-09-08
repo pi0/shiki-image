@@ -56,10 +56,10 @@ export function codeToContainer(
 }
 
 export async function loadFont(font: string | ArrayBuffer | Buffer) {
-  let fontData: ArrayBuffer | Buffer;
+  let fontData: Buffer | ArrayBuffer;
 
   if (typeof font === "string") {
-    const fontCache: Map<string, ArrayBuffer | Buffer> = ((
+    const fontCache: Map<string, Buffer | ArrayBuffer> = ((
       globalThis as any
     ).__shikiImageFontCache__ ||= new Map());
 
