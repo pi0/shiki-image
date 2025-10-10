@@ -2,7 +2,7 @@ import type { ContainerNode } from "@takumi-rs/helpers";
 import { container, text, em, percentage } from "@takumi-rs/helpers";
 import type { CodeToImageCoreOptions, CodeToImageOptions } from "./types";
 
-const DEFAULT_FONT_SIZE = 18;
+const DEFAULT_FONT_SIZE = 32;
 const DEFAULT_FONT_RATIO = 0.63;
 const DEFAULT_LINE_HEIGHT = 1.3;
 
