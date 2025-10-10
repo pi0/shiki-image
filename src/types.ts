@@ -51,12 +51,14 @@ export interface CodeToImageOptions {
   style?: PartialStyle;
 
   /**
-   * Output format: `png`, `webp`, `avif`, or `jpeg`. Default is `webp`.
+   * Output format: `png`, `webp`, `avif`, or `jpeg`.
+   *
+   * @default webp
    */
   format?: OutputFormat;
 
   /**
-   * Image quality between 0 and 100 (jpeg format only).
+   * Image quality between 0 and 100 (jpeg and avif format only).
    */
   quality?: number;
 }

@@ -1,7 +1,7 @@
-import { bench, do_not_optimize, run } from "mitata";
+import { bench, do_not_optimize, run, summary } from "mitata";
 import { codeToImageCore, loadFont } from "../dist/core.mjs";
 import { createHighlighter } from "shiki";
-import { Renderer } from "@takumi-rs/core";
+import { Renderer, type OutputFormat } from "@takumi-rs/core";
 
 const exampleCode = /* js */ `
 import { writeFile } from "node:fs/promises";
@@ -27,9 +27,9 @@ const renderer = new Renderer({
   fonts: [await loadFont(undefined)],
 });
 
-bench("Takumi with default options", async () => {
+async function renderTest(format: OutputFormat) {
   // to make the benchmark more fair,
-  // we purge the font rasterization/shaping cache before every run
+  // we purge the font layout cache before every run
   renderer.purgeFontCache();
 
   do_not_optimize(
@@ -38,7 +38,7 @@ bench("Takumi with default options", async () => {
       {
         lang: "js",
         theme: "github-dark",
-        format: "webp",
+        format,
         style: { borderRadius: 4 },
       },
       {
@@ -47,6 +47,12 @@ bench("Takumi with default options", async () => {
       },
     ),
   );
+}
+
+summary(() => {
+  bench("Takumi with default options (png)", () => renderTest("png"));
+
+  bench("Takumi with default options (webp)", () => renderTest("webp"));
 });
 
 await run();

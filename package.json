@@ -26,21 +26,21 @@
     "test:types": "tsc --noEmit --skipLibCheck"
   },
   "dependencies": {
-    "@takumi-rs/core": "^0.29.5",
-    "@takumi-rs/helpers": "^0.29.5",
+    "@takumi-rs/core": "^0.35.2",
+    "@takumi-rs/helpers": "^0.35.2",
     "shiki": "^3.12.2"
   },
   "devDependencies": {
-    "@types/node": "^24.3.1",
+    "@types/node": "^24.7.1",
     "@vitest/coverage-v8": "^3.2.4",
     "automd": "^0.4.0",
     "changelogen": "^0.6.2",
-    "eslint": "^9.35.0",
+    "eslint": "^9.37.0",
     "eslint-config-unjs": "^0.5.0",
     "mitata": "^1.0.34",
     "obuild": "^0.2.1",
     "prettier": "^3.6.2",
-    "typescript": "^5.9.2",
+    "typescript": "^5.9.3",
     "vitest": "^3.2.4"
   },
   "packageManager": "pnpm@10.14.0"

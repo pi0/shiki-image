@@ -12,7 +12,7 @@ export async function codeToImageCore(
 ) {
   const container = codeToContainer(code, opts, coreOpts);
   const { width, height, format } = renderOptions(code, opts);
-  return await coreOpts.renderer.renderAsync(container, {
+  return await coreOpts.renderer.render(container, {
     width,
     height,
     format,
