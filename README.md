@@ -74,7 +74,7 @@ Font ratio used to compute the final font size. Default is `0.63`.
 Rendering width. By default is computed as `columns * fontSize * fontRatio`.
 
 > [!NOTE]
-> Default font size is `18` and can be customized using `style.fontSize`.
+> Default font size is `32` and can be customized using `style.fontSize`.
 
 ### `height`
 
