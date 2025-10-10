@@ -34,7 +34,7 @@ export interface CodeToImageOptions {
   /**
    * Rendering width. By default is computed as `columns * fontSize * fontRatio`.
    *
-   * Default font size is `18` and can be customized using `style.fontSize`.
+   * Default font size is `32` and can be customized using `style.fontSize`.
    */
   width?: number;
 
