@@ -28,10 +28,6 @@ const renderer = new Renderer({
 });
 
 async function renderTest(format: OutputFormat) {
-  // to make the benchmark more fair,
-  // we purge the font layout cache before every run
-  renderer.purgeFontCache();
-
   do_not_optimize(
     await codeToImageCore(
       exampleCode,

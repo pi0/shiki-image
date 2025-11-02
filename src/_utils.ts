@@ -33,20 +33,12 @@ export function codeToContainer(
     children: tokens.map((line) =>
       container({
         style: {
-          display: "flex",
+          display: "block",
           minHeight: em(1),
+          width: percentage(100),
         },
         children: line.map((token) =>
-          token.content.trim() === ""
-            ? container({
-                style: {
-                  minWidth: em(0.5 * token.content.length),
-                  minHeight: em(1),
-                  // backgroundColor: "gray",
-                },
-              })
-            : // TODO: fontStyle
-              text(token.content, { color: token.color }),
+          text(token.content, { color: token.color, display: "inline" }),
         ),
       }),
     ),
