@@ -65,20 +65,16 @@ Font used to render the code. Can be either a string (remote URL to fetch) or an
 > [!TIP]
 > If a URL is passed, response will be cached in memory for the next renders.
 
-### `fontRatio`
-
-Font ratio used to compute the final font size. Default is `0.63`.
-
 ### `width`
 
-Rendering width. By default is computed as `columns * fontSize * fontRatio`.
+Rendering width. If not specified, it will be auto computed based on the code.
 
 > [!NOTE]
 > Default font size is `32` and can be customized using `style.fontSize`.
 
 ### `height`
 
-Rendering height. By default is computed as `lines * fontSize * lineHeight`.
+Rendering height. If not specified, it will be auto computed based on the code.
 
 > [!NOTE]
 > Default lineHeight is `1.3` and can be customized using `style.lineHeight`.

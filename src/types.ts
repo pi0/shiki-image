@@ -1,12 +1,14 @@
 import type { BundledLanguage, BundledTheme, HighlighterCore } from "shiki";
 import type { PartialStyle } from "@takumi-rs/helpers";
-import type { Renderer as NativeRenderer } from "@takumi-rs/core";
-import type { OutputFormat } from "@takumi-rs/core";
+import type {
+  Renderer as NativeRenderer,
+  RenderOptions,
+} from "@takumi-rs/core";
 
 /**
  * Options for rendering code to image.
  */
-export interface CodeToImageOptions {
+export interface CodeToImageOptions extends RenderOptions {
   /**
    * Code language. See shiki supported languages.
    */
@@ -24,29 +26,10 @@ export interface CodeToImageOptions {
    *
    * If no font is specified, it will use the builtin `Geist Mono` font from Takumi.
    */
-  font?: string | ArrayBuffer;
+  font?: string | ArrayBuffer | Uint8Array;
 
   /**
-   * Font ratio used to compute the final font size. Default is `0.63`.
-   */
-  fontRatio?: number;
-
-  /**
-   * Rendering width. By default is computed as `columns * fontSize * fontRatio`.
-   *
-   * Default font size is `32` and can be customized using `style.fontSize`.
-   */
-  width?: number;
-
-  /**
-   * Rendering height. By default is computed as `lines * fontSize * lineHeight`.
-   *
-   * Default `lineHeight` is `1.3` and can be customized using `style.lineHeight`.
-   */
-  height?: number;
-
-  /**
-   * Additional container styles. See takumi stylesheets.
+   * Additional container styles. See takumi stylesheets in https://takumi.kane.tw/docs/reference.
    */
   style?: PartialStyle;
 
@@ -55,12 +38,7 @@ export interface CodeToImageOptions {
    *
    * @default webp
    */
-  format?: OutputFormat;
-
-  /**
-   * Image quality between 0 and 100 (jpeg and avif format only).
-   */
-  quality?: number;
+  format?: RenderOptions["format"];
 }
 
 export interface CodeToImageCoreOptions {

@@ -1,4 +1,4 @@
-import { codeToContainer, renderOptions } from "./_utils";
+import { codeToContainer } from "./_utils";
 import type { CodeToImageCoreOptions, CodeToImageOptions } from "./types";
 
 export { loadFont } from "./_utils";
@@ -11,11 +11,8 @@ export async function codeToImageCore(
   coreOpts: CodeToImageCoreOptions,
 ) {
   const container = codeToContainer(code, opts, coreOpts);
-  const { width, height, format } = renderOptions(code, opts);
   return await coreOpts.renderer.render(container, {
-    width,
-    height,
-    format,
-    quality: opts.quality,
+    ...opts,
+    format: opts.format ?? "webp",
   });
 }
