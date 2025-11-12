@@ -11,5 +11,8 @@ export async function codeToImageCore(
   coreOpts: CodeToImageCoreOptions,
 ) {
   const container = codeToContainer(code, opts, coreOpts);
-  return await coreOpts.renderer.render(container, opts);
+  return await coreOpts.renderer.render(container, {
+    ...opts,
+    format: opts.format ?? "webp",
+  });
 }
