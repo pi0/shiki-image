@@ -27,26 +27,17 @@ export interface CodeToImageOptions {
   font?: string | ArrayBuffer;
 
   /**
-   * Font ratio used to compute the final font size. Default is `0.63`.
-   */
-  fontRatio?: number;
-
-  /**
-   * Rendering width. By default is computed as `columns * fontSize * fontRatio`.
-   *
-   * Default font size is `32` and can be customized using `style.fontSize`.
+   * Rendering width. If not specified, it will be auto computed based on the code.
    */
   width?: number;
 
   /**
-   * Rendering height. By default is computed as `lines * fontSize * lineHeight`.
-   *
-   * Default `lineHeight` is `1.3` and can be customized using `style.lineHeight`.
+   * Rendering height. If not specified, it will be auto computed based on the code.
    */
   height?: number;
 
   /**
-   * Additional container styles. See takumi stylesheets.
+   * Additional container styles. See takumi stylesheets in https://takumi.kane.tw/docs/reference.
    */
   style?: PartialStyle;
 

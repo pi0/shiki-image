@@ -1,9 +1,8 @@
 import type { ContainerNode } from "@takumi-rs/helpers";
-import { container, text, em, percentage } from "@takumi-rs/helpers";
+import { container, text } from "@takumi-rs/helpers";
 import type { CodeToImageCoreOptions, CodeToImageOptions } from "./types";
 
 const DEFAULT_FONT_SIZE = 32;
-const DEFAULT_FONT_RATIO = 0.63;
 const DEFAULT_LINE_HEIGHT = 1.3;
 
 export function codeToContainer(
@@ -22,20 +21,21 @@ export function codeToContainer(
       backgroundColor: bg,
       display: "flex",
       flexDirection: "column",
-      width: percentage(100),
-      height: percentage(100),
-      padding: em(1),
+      width: "100%",
+      height: "100%",
+      paddingInline: "2rem",
       fontSize: DEFAULT_FONT_SIZE,
       lineHeight: DEFAULT_LINE_HEIGHT,
       fontFamily: "monospace",
+      whiteSpace: "pre",
       ...opts.style,
     },
     children: tokens.map((line) =>
       container({
         style: {
           display: "block",
-          minHeight: em(1),
-          width: percentage(100),
+          minHeight: "1em",
+          width: "100%",
         },
         children: line.map((token) =>
           text(token.content, { color: token.color, display: "inline" }),
@@ -47,11 +47,11 @@ export function codeToContainer(
   return root;
 }
 
-export async function loadFont(font: string | ArrayBuffer | Buffer) {
-  let fontData: Buffer | ArrayBuffer;
+export async function loadFont(font: string | ArrayBuffer | Uint8Array) {
+  let fontData: Uint8Array | ArrayBuffer;
 
   if (typeof font === "string") {
-    const fontCache: Map<string, Buffer | ArrayBuffer> = ((
+    const fontCache: Map<string, Uint8Array | ArrayBuffer> = ((
       globalThis as any
     ).__shikiImageFontCache__ ||= new Map());
 
@@ -72,34 +72,16 @@ export async function loadFont(font: string | ArrayBuffer | Buffer) {
   }
 
   if (font instanceof ArrayBuffer) {
-    fontData = Buffer.from(font);
+    fontData = new Uint8Array(font);
     return fontData;
   }
 
-  if (font instanceof Buffer) {
+  if (font instanceof Uint8Array) {
     fontData = font;
     return fontData;
   }
 
   throw new Error(
-    "Invalid font type. Expected a string, ArrayBuffer, or Buffer",
+    "Invalid font type. Expected a string, ArrayBuffer, or Uint8Array",
   );
-}
-
-export function renderOptions(code: string, opts: CodeToImageOptions) {
-  const lines = code.split("\n").length;
-  const columns = Math.max(...code.split("\n").map((l) => l.length));
-
-  const fontRatio = opts?.fontRatio || DEFAULT_FONT_RATIO;
-  const fontSize =
-    Number.parseInt(opts.style?.fontSize as string) || DEFAULT_FONT_SIZE;
-  const lineHeight =
-    Number.parseInt(opts.style?.lineHeight as string) || DEFAULT_LINE_HEIGHT;
-
-  const width = opts.width || (columns + 2) * (fontSize * fontRatio);
-  const height = opts.height || (lines + 2) * (fontSize * lineHeight);
-
-  const format = opts.format || ("webp" as const);
-
-  return { width, height, format };
 }
