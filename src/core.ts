@@ -11,8 +11,5 @@ export async function codeToImageCore(
   coreOpts: CodeToImageCoreOptions,
 ) {
   const container = codeToContainer(code, opts, coreOpts);
-  return await coreOpts.renderer.render(container, {
-    format: opts.format,
-    quality: opts.quality,
-  });
+  return await coreOpts.renderer.render(container, opts);
 }
