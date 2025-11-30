@@ -39,7 +39,7 @@
     "eslint-config-unjs": "^0.5.0",
     "mitata": "^1.0.34",
     "obuild": "^0.4.3",
-    "prettier": "^3.7.1",
+    "prettier": "^3.7.3",
     "typescript": "^5.9.3",
     "vitest": "^4.0.14"
   },
