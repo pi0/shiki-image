@@ -26,8 +26,8 @@
     "test:types": "tsc --noEmit --skipLibCheck"
   },
   "dependencies": {
-    "@takumi-rs/core": "^0.60.7",
-    "@takumi-rs/helpers": "^0.60.7",
+    "@takumi-rs/core": "^0.68.5",
+    "@takumi-rs/helpers": "^0.68.5",
     "shiki": "^3.20.0"
   },
   "devDependencies": {
