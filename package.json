@@ -28,7 +28,7 @@
   "dependencies": {
     "@takumi-rs/core": "^0.68.5",
     "@takumi-rs/helpers": "^0.68.5",
-    "shiki": "^3.20.0"
+    "shiki": "^4.0.0"
   },
   "devDependencies": {
     "@types/node": "^25.0.3",
