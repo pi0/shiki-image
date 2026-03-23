@@ -40,7 +40,7 @@
     "mitata": "^1.0.34",
     "obuild": "^0.4.9",
     "prettier": "^3.7.4",
-    "typescript": "^5.9.3",
+    "typescript": "^6.0.2",
     "vitest": "^4.0.16"
   },
   "packageManager": "pnpm@10.24.0"
