@@ -1,14 +1,11 @@
 import type { BundledLanguage, BundledTheme, HighlighterCore } from "shiki";
-import type { PartialStyle } from "@takumi-rs/helpers";
-import type {
-  Renderer as NativeRenderer,
-  RenderOptions,
-} from "@takumi-rs/core";
+import type { RenderOptions } from "takumi-js";
+import type { Properties } from "csstype";
 
 /**
  * Options for rendering code to image.
  */
-export interface CodeToImageOptions extends RenderOptions {
+export type CodeToImageOptions = RenderOptions & {
   /**
    * Code language. See shiki supported languages.
    */
@@ -31,7 +28,7 @@ export interface CodeToImageOptions extends RenderOptions {
   /**
    * Additional container styles. See takumi stylesheets in https://takumi.kane.tw/docs/reference.
    */
-  style?: PartialStyle;
+  style?: Properties;
 
   /**
    * Output format: `png`, `webp`, `avif`, or `jpeg`.
@@ -39,9 +36,8 @@ export interface CodeToImageOptions extends RenderOptions {
    * @default webp
    */
   format?: RenderOptions["format"];
-}
+};
 
 export interface CodeToImageCoreOptions {
   highlighter: HighlighterCore;
-  renderer: NativeRenderer;
 }

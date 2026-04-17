@@ -11,7 +11,7 @@ const buffer = await codeToImage('console.log("hello, world!");', {
   lang: "js",
   theme: "github-dark",
   format: 'webp',
-  style: { borderRadius: 4 },
+  style: { borderRadius: "4px" },
 });
 
 await writeFile("image.webp", buffer);
@@ -23,7 +23,7 @@ describe("shiki-image", () => {
     const img = await codeToImage(exampleCode, {
       lang: "js",
       theme: "github-dark",
-      style: { borderRadius: 4 },
+      style: { borderRadius: "4px" },
     });
     await writeFile(
       fileURLToPath(new URL(".snapshot/image.webp", import.meta.url)),
@@ -40,7 +40,7 @@ describe("shiki-image", () => {
         theme: "github-dark",
         font: "https://www.google.com/404",
       }),
-    ).rejects.toThrowError(
+    ).rejects.toThrow(
       "Font fetch failed (404 Not Found): https://www.google.com/404",
     );
   });

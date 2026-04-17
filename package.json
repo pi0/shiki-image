@@ -26,22 +26,22 @@
     "test:types": "tsc --noEmit --skipLibCheck"
   },
   "dependencies": {
-    "@takumi-rs/core": "^0.68.5",
-    "@takumi-rs/helpers": "^0.68.5",
-    "shiki": "^3.20.0"
+    "shiki": "^4.0.2",
+    "takumi-js": "^1.0.14"
   },
   "devDependencies": {
-    "@types/node": "^25.0.3",
-    "@vitest/coverage-v8": "^4.0.16",
-    "automd": "^0.4.2",
+    "@types/node": "^25.6.0",
+    "@vitest/coverage-v8": "^4.1.4",
+    "automd": "^0.4.3",
     "changelogen": "^0.6.2",
-    "eslint": "^9.39.2",
-    "eslint-config-unjs": "^0.5.0",
+    "csstype": "^3.2.3",
+    "eslint": "^10.2.0",
+    "eslint-config-unjs": "^0.6.2",
     "mitata": "^1.0.34",
-    "obuild": "^0.4.9",
-    "prettier": "^3.7.4",
-    "typescript": "^5.9.3",
-    "vitest": "^4.0.16"
+    "obuild": "^0.4.33",
+    "prettier": "^3.8.3",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.4"
   },
   "packageManager": "pnpm@10.24.0"
 }

@@ -1,7 +1,7 @@
 import { bench, do_not_optimize, run, summary } from "mitata";
-import { codeToImageCore, loadFont } from "../dist/core.mjs";
+import { codeToImageCore } from "../dist/core.mjs";
 import { createHighlighter } from "shiki";
-import { Renderer, type OutputFormat } from "@takumi-rs/core";
+import type { OutputFormat } from "takumi-js";
 
 const exampleCode = /* js */ `
 import { writeFile } from "node:fs/promises";
@@ -11,7 +11,7 @@ const buffer = await codeToImage('console.log("hello, world!");', {
   lang: "js",
   theme: "github-dark",
   format: 'webp',
-  style: { borderRadius: 4 },
+  style: { borderRadius: "4px" },
 });
 
 await writeFile("image.webp", buffer);
@@ -22,11 +22,6 @@ const highlighter = await createHighlighter({
   langs: ["js"],
 });
 
-// preload the font
-const renderer = new Renderer({
-  fonts: [await loadFont(undefined)],
-});
-
 async function renderTest(format: OutputFormat) {
   do_not_optimize(
     await codeToImageCore(
@@ -35,11 +30,10 @@ async function renderTest(format: OutputFormat) {
         lang: "js",
         theme: "github-dark",
         format,
-        style: { borderRadius: 4 },
+        style: { borderRadius: "4px" },
       },
       {
         highlighter,
-        renderer,
       },
     ),
   );

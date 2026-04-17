@@ -1,6 +1,6 @@
-import type { ContainerNode } from "@takumi-rs/helpers";
-import { container, text } from "@takumi-rs/helpers";
+import type { ContainerNode } from "takumi-js";
 import type { CodeToImageCoreOptions, CodeToImageOptions } from "./types";
+import { container, text } from "takumi-js/helpers";
 
 const DEFAULT_FONT_SIZE = 32;
 const DEFAULT_LINE_HEIGHT = 1.3;
@@ -38,50 +38,17 @@ export function codeToContainer(
           width: "100%",
         },
         children: line.map((token) =>
-          text(token.content, { color: token.color, display: "inline" }),
+          text({
+            text: token.content,
+            style: {
+              color: token.color,
+              display: "inline",
+            },
+          }),
         ),
       }),
     ),
   });
 
   return root;
-}
-
-export async function loadFont(font: string | ArrayBuffer | Uint8Array) {
-  let fontData: Uint8Array | ArrayBuffer;
-
-  if (typeof font === "string") {
-    const fontCache: Map<string, Uint8Array | ArrayBuffer> = ((
-      globalThis as any
-    ).__shikiImageFontCache__ ||= new Map());
-
-    const cachedFont = fontCache.get(font);
-    if (cachedFont) {
-      fontData = cachedFont;
-    } else {
-      const res = await fetch(font);
-      if (!res.ok) {
-        throw new Error(
-          `Font fetch failed (${res.status} ${res.statusText}): ${font}`,
-        );
-      }
-      fontData = await res.arrayBuffer();
-      fontCache.set(font, fontData);
-    }
-    return fontData;
-  }
-
-  if (font instanceof ArrayBuffer) {
-    fontData = new Uint8Array(font);
-    return fontData;
-  }
-
-  if (font instanceof Uint8Array) {
-    fontData = font;
-    return fontData;
-  }
-
-  throw new Error(
-    "Invalid font type. Expected a string, ArrayBuffer, or Uint8Array",
-  );
 }
