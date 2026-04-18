@@ -35,7 +35,7 @@
     "automd": "^0.4.3",
     "changelogen": "^0.6.2",
     "csstype": "^3.2.3",
-    "eslint": "^10.2.0",
+    "eslint": "^10.2.1",
     "eslint-config-unjs": "^0.6.2",
     "mitata": "^1.0.34",
     "obuild": "^0.4.33",
@@ -43,5 +43,5 @@
     "typescript": "^6.0.3",
     "vitest": "^4.1.4"
   },
-  "packageManager": "pnpm@10.24.0"
+  "packageManager": "pnpm@10.33.0"
 }

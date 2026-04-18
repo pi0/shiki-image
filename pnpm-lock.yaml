@@ -30,11 +30,11 @@ importers:
         specifier: ^3.2.3
         version: 3.2.3
       eslint:
-        specifier: ^10.2.0
-        version: 10.2.0(jiti@2.6.1)
+        specifier: ^10.2.1
+        version: 10.2.1(jiti@2.6.1)
       eslint-config-unjs:
         specifier: ^0.6.2
-        version: 0.6.2(eslint@10.2.0(jiti@2.6.1))(typescript@6.0.3)
+        version: 0.6.2(eslint@10.2.1(jiti@2.6.1))(typescript@6.0.3)
       mitata:
         specifier: ^1.0.34
         version: 1.0.34
@@ -580,6 +580,7 @@ packages:
     engines: { node: ">= 10.0.0" }
     cpu: [arm]
     os: [linux]
+    libc: [glibc]
 
   "@parcel/watcher-linux-arm-musl@2.5.6":
     resolution:
@@ -589,6 +590,7 @@ packages:
     engines: { node: ">= 10.0.0" }
     cpu: [arm]
     os: [linux]
+    libc: [musl]
 
   "@parcel/watcher-linux-arm64-glibc@2.5.6":
     resolution:
@@ -598,6 +600,7 @@ packages:
     engines: { node: ">= 10.0.0" }
     cpu: [arm64]
     os: [linux]
+    libc: [glibc]
 
   "@parcel/watcher-linux-arm64-musl@2.5.6":
     resolution:
@@ -607,6 +610,7 @@ packages:
     engines: { node: ">= 10.0.0" }
     cpu: [arm64]
     os: [linux]
+    libc: [musl]
 
   "@parcel/watcher-linux-x64-glibc@2.5.6":
     resolution:
@@ -616,6 +620,7 @@ packages:
     engines: { node: ">= 10.0.0" }
     cpu: [x64]
     os: [linux]
+    libc: [glibc]
 
   "@parcel/watcher-linux-x64-musl@2.5.6":
     resolution:
@@ -625,6 +630,7 @@ packages:
     engines: { node: ">= 10.0.0" }
     cpu: [x64]
     os: [linux]
+    libc: [musl]
 
   "@parcel/watcher-win32-arm64@2.5.6":
     resolution:
@@ -713,6 +719,7 @@ packages:
     engines: { node: ^20.19.0 || >=22.12.0 }
     cpu: [arm64]
     os: [linux]
+    libc: [glibc]
 
   "@rolldown/binding-linux-arm64-musl@1.0.0-rc.16":
     resolution:
@@ -722,6 +729,7 @@ packages:
     engines: { node: ^20.19.0 || >=22.12.0 }
     cpu: [arm64]
     os: [linux]
+    libc: [musl]
 
   "@rolldown/binding-linux-ppc64-gnu@1.0.0-rc.16":
     resolution:
@@ -731,6 +739,7 @@ packages:
     engines: { node: ^20.19.0 || >=22.12.0 }
     cpu: [ppc64]
     os: [linux]
+    libc: [glibc]
 
   "@rolldown/binding-linux-s390x-gnu@1.0.0-rc.16":
     resolution:
@@ -740,6 +749,7 @@ packages:
     engines: { node: ^20.19.0 || >=22.12.0 }
     cpu: [s390x]
     os: [linux]
+    libc: [glibc]
 
   "@rolldown/binding-linux-x64-gnu@1.0.0-rc.16":
     resolution:
@@ -749,6 +759,7 @@ packages:
     engines: { node: ^20.19.0 || >=22.12.0 }
     cpu: [x64]
     os: [linux]
+    libc: [glibc]
 
   "@rolldown/binding-linux-x64-musl@1.0.0-rc.16":
     resolution:
@@ -758,6 +769,7 @@ packages:
     engines: { node: ^20.19.0 || >=22.12.0 }
     cpu: [x64]
     os: [linux]
+    libc: [musl]
 
   "@rolldown/binding-openharmony-arm64@1.0.0-rc.16":
     resolution:
@@ -855,6 +867,7 @@ packages:
       }
     cpu: [arm]
     os: [linux]
+    libc: [glibc]
 
   "@rollup/rollup-linux-arm-musleabihf@4.54.0":
     resolution:
@@ -863,6 +876,7 @@ packages:
       }
     cpu: [arm]
     os: [linux]
+    libc: [musl]
 
   "@rollup/rollup-linux-arm64-gnu@4.54.0":
     resolution:
@@ -871,6 +885,7 @@ packages:
       }
     cpu: [arm64]
     os: [linux]
+    libc: [glibc]
 
   "@rollup/rollup-linux-arm64-musl@4.54.0":
     resolution:
@@ -879,6 +894,7 @@ packages:
       }
     cpu: [arm64]
     os: [linux]
+    libc: [musl]
 
   "@rollup/rollup-linux-loong64-gnu@4.54.0":
     resolution:
@@ -887,6 +903,7 @@ packages:
       }
     cpu: [loong64]
     os: [linux]
+    libc: [glibc]
 
   "@rollup/rollup-linux-ppc64-gnu@4.54.0":
     resolution:
@@ -895,6 +912,7 @@ packages:
       }
     cpu: [ppc64]
     os: [linux]
+    libc: [glibc]
 
   "@rollup/rollup-linux-riscv64-gnu@4.54.0":
     resolution:
@@ -903,6 +921,7 @@ packages:
       }
     cpu: [riscv64]
     os: [linux]
+    libc: [glibc]
 
   "@rollup/rollup-linux-riscv64-musl@4.54.0":
     resolution:
@@ -911,6 +930,7 @@ packages:
       }
     cpu: [riscv64]
     os: [linux]
+    libc: [musl]
 
   "@rollup/rollup-linux-s390x-gnu@4.54.0":
     resolution:
@@ -919,6 +939,7 @@ packages:
       }
     cpu: [s390x]
     os: [linux]
+    libc: [glibc]
 
   "@rollup/rollup-linux-x64-gnu@4.54.0":
     resolution:
@@ -927,6 +948,7 @@ packages:
       }
     cpu: [x64]
     os: [linux]
+    libc: [glibc]
 
   "@rollup/rollup-linux-x64-musl@4.54.0":
     resolution:
@@ -935,6 +957,7 @@ packages:
       }
     cpu: [x64]
     os: [linux]
+    libc: [musl]
 
   "@rollup/rollup-openharmony-arm64@4.54.0":
     resolution:
@@ -1072,6 +1095,7 @@ packages:
       }
     cpu: [arm64]
     os: [linux]
+    libc: [glibc]
 
   "@takumi-rs/core-linux-arm64-musl@1.0.14":
     resolution:
@@ -1084,6 +1108,7 @@ packages:
       }
     cpu: [arm64]
     os: [linux]
+    libc: [musl]
 
   "@takumi-rs/core-linux-x64-gnu@1.0.14":
     resolution:
@@ -1096,6 +1121,7 @@ packages:
       }
     cpu: [x64]
     os: [linux]
+    libc: [glibc]
 
   "@takumi-rs/core-linux-x64-musl@1.0.14":
     resolution:
@@ -1108,6 +1134,7 @@ packages:
       }
     cpu: [x64]
     os: [linux]
+    libc: [musl]
 
   "@takumi-rs/core-win32-arm64-msvc@1.0.14":
     resolution:
@@ -1922,10 +1949,10 @@ packages:
       }
     engines: { node: ^20.19.0 || ^22.13.0 || >=24 }
 
-  eslint@10.2.0:
+  eslint@10.2.1:
     resolution:
       {
-        integrity: sha512-+L0vBFYGIpSNIt/KWTpFonPrqYvgKw1eUI5Vn7mEogrQcWtWYtNQ7dNqC+px/J0idT3BAkiWrhfS7k+Tum8TUA==,
+        integrity: sha512-wiyGaKsDgqXvF40P8mDwiUp/KQjE1FdrIEJsM8PZ3XCiniTMXS3OHWWUe5FI5agoCnr8x4xPrTDZuxsBlNHl+Q==,
       }
     engines: { node: ^20.19.0 || ^22.13.0 || >=24 }
     hasBin: true
@@ -3638,9 +3665,9 @@ snapshots:
   "@esbuild/win32-x64@0.27.7":
     optional: true
 
-  "@eslint-community/eslint-utils@4.9.1(eslint@10.2.0(jiti@2.6.1))":
+  "@eslint-community/eslint-utils@4.9.1(eslint@10.2.1(jiti@2.6.1))":
     dependencies:
-      eslint: 10.2.0(jiti@2.6.1)
+      eslint: 10.2.1(jiti@2.6.1)
       eslint-visitor-keys: 3.4.3
 
   "@eslint-community/regexpp@4.12.2": {}
@@ -4043,15 +4070,15 @@ snapshots:
 
   "@types/unist@3.0.3": {}
 
-  "@typescript-eslint/eslint-plugin@8.58.2(@typescript-eslint/parser@8.58.2(eslint@10.2.0(jiti@2.6.1))(typescript@6.0.3))(eslint@10.2.0(jiti@2.6.1))(typescript@6.0.3)":
+  "@typescript-eslint/eslint-plugin@8.58.2(@typescript-eslint/parser@8.58.2(eslint@10.2.1(jiti@2.6.1))(typescript@6.0.3))(eslint@10.2.1(jiti@2.6.1))(typescript@6.0.3)":
     dependencies:
       "@eslint-community/regexpp": 4.12.2
-      "@typescript-eslint/parser": 8.58.2(eslint@10.2.0(jiti@2.6.1))(typescript@6.0.3)
+      "@typescript-eslint/parser": 8.58.2(eslint@10.2.1(jiti@2.6.1))(typescript@6.0.3)
       "@typescript-eslint/scope-manager": 8.58.2
-      "@typescript-eslint/type-utils": 8.58.2(eslint@10.2.0(jiti@2.6.1))(typescript@6.0.3)
-      "@typescript-eslint/utils": 8.58.2(eslint@10.2.0(jiti@2.6.1))(typescript@6.0.3)
+      "@typescript-eslint/type-utils": 8.58.2(eslint@10.2.1(jiti@2.6.1))(typescript@6.0.3)
+      "@typescript-eslint/utils": 8.58.2(eslint@10.2.1(jiti@2.6.1))(typescript@6.0.3)
       "@typescript-eslint/visitor-keys": 8.58.2
-      eslint: 10.2.0(jiti@2.6.1)
+      eslint: 10.2.1(jiti@2.6.1)
       ignore: 7.0.5
       natural-compare: 1.4.0
       ts-api-utils: 2.5.0(typescript@6.0.3)
@@ -4059,14 +4086,14 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  "@typescript-eslint/parser@8.58.2(eslint@10.2.0(jiti@2.6.1))(typescript@6.0.3)":
+  "@typescript-eslint/parser@8.58.2(eslint@10.2.1(jiti@2.6.1))(typescript@6.0.3)":
     dependencies:
       "@typescript-eslint/scope-manager": 8.58.2
       "@typescript-eslint/types": 8.58.2
       "@typescript-eslint/typescript-estree": 8.58.2(typescript@6.0.3)
       "@typescript-eslint/visitor-keys": 8.58.2
       debug: 4.4.3
-      eslint: 10.2.0(jiti@2.6.1)
+      eslint: 10.2.1(jiti@2.6.1)
       typescript: 6.0.3
     transitivePeerDependencies:
       - supports-color
@@ -4089,13 +4116,13 @@ snapshots:
     dependencies:
       typescript: 6.0.3
 
-  "@typescript-eslint/type-utils@8.58.2(eslint@10.2.0(jiti@2.6.1))(typescript@6.0.3)":
+  "@typescript-eslint/type-utils@8.58.2(eslint@10.2.1(jiti@2.6.1))(typescript@6.0.3)":
     dependencies:
       "@typescript-eslint/types": 8.58.2
       "@typescript-eslint/typescript-estree": 8.58.2(typescript@6.0.3)
-      "@typescript-eslint/utils": 8.58.2(eslint@10.2.0(jiti@2.6.1))(typescript@6.0.3)
+      "@typescript-eslint/utils": 8.58.2(eslint@10.2.1(jiti@2.6.1))(typescript@6.0.3)
       debug: 4.4.3
-      eslint: 10.2.0(jiti@2.6.1)
+      eslint: 10.2.1(jiti@2.6.1)
       ts-api-utils: 2.5.0(typescript@6.0.3)
       typescript: 6.0.3
     transitivePeerDependencies:
@@ -4118,13 +4145,13 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  "@typescript-eslint/utils@8.58.2(eslint@10.2.0(jiti@2.6.1))(typescript@6.0.3)":
+  "@typescript-eslint/utils@8.58.2(eslint@10.2.1(jiti@2.6.1))(typescript@6.0.3)":
     dependencies:
-      "@eslint-community/eslint-utils": 4.9.1(eslint@10.2.0(jiti@2.6.1))
+      "@eslint-community/eslint-utils": 4.9.1(eslint@10.2.1(jiti@2.6.1))
       "@typescript-eslint/scope-manager": 8.58.2
       "@typescript-eslint/types": 8.58.2
       "@typescript-eslint/typescript-estree": 8.58.2(typescript@6.0.3)
-      eslint: 10.2.0(jiti@2.6.1)
+      eslint: 10.2.1(jiti@2.6.1)
       typescript: 6.0.3
     transitivePeerDependencies:
       - supports-color
@@ -4487,28 +4514,28 @@ snapshots:
 
   escape-string-regexp@5.0.0: {}
 
-  eslint-config-unjs@0.6.2(eslint@10.2.0(jiti@2.6.1))(typescript@6.0.3):
+  eslint-config-unjs@0.6.2(eslint@10.2.1(jiti@2.6.1))(typescript@6.0.3):
     dependencies:
       "@eslint/js": 9.39.4
       "@eslint/markdown": 7.5.1
-      eslint: 10.2.0(jiti@2.6.1)
-      eslint-plugin-unicorn: 62.0.0(eslint@10.2.0(jiti@2.6.1))
+      eslint: 10.2.1(jiti@2.6.1)
+      eslint-plugin-unicorn: 62.0.0(eslint@10.2.1(jiti@2.6.1))
       globals: 17.5.0
       typescript: 6.0.3
-      typescript-eslint: 8.58.2(eslint@10.2.0(jiti@2.6.1))(typescript@6.0.3)
+      typescript-eslint: 8.58.2(eslint@10.2.1(jiti@2.6.1))(typescript@6.0.3)
     transitivePeerDependencies:
       - supports-color
 
-  eslint-plugin-unicorn@62.0.0(eslint@10.2.0(jiti@2.6.1)):
+  eslint-plugin-unicorn@62.0.0(eslint@10.2.1(jiti@2.6.1)):
     dependencies:
       "@babel/helper-validator-identifier": 7.28.5
-      "@eslint-community/eslint-utils": 4.9.1(eslint@10.2.0(jiti@2.6.1))
+      "@eslint-community/eslint-utils": 4.9.1(eslint@10.2.1(jiti@2.6.1))
       "@eslint/plugin-kit": 0.4.1
       change-case: 5.4.4
       ci-info: 4.4.0
       clean-regexp: 1.0.0
       core-js-compat: 3.49.0
-      eslint: 10.2.0(jiti@2.6.1)
+      eslint: 10.2.1(jiti@2.6.1)
       esquery: 1.7.0
       find-up-simple: 1.0.1
       globals: 16.5.0
@@ -4532,9 +4559,9 @@ snapshots:
 
   eslint-visitor-keys@5.0.1: {}
 
-  eslint@10.2.0(jiti@2.6.1):
+  eslint@10.2.1(jiti@2.6.1):
     dependencies:
-      "@eslint-community/eslint-utils": 4.9.1(eslint@10.2.0(jiti@2.6.1))
+      "@eslint-community/eslint-utils": 4.9.1(eslint@10.2.1(jiti@2.6.1))
       "@eslint-community/regexpp": 4.12.2
       "@eslint/config-array": 0.23.5
       "@eslint/config-helpers": 0.5.5
@@ -5516,13 +5543,13 @@ snapshots:
     dependencies:
       prelude-ls: 1.2.1
 
-  typescript-eslint@8.58.2(eslint@10.2.0(jiti@2.6.1))(typescript@6.0.3):
+  typescript-eslint@8.58.2(eslint@10.2.1(jiti@2.6.1))(typescript@6.0.3):
     dependencies:
-      "@typescript-eslint/eslint-plugin": 8.58.2(@typescript-eslint/parser@8.58.2(eslint@10.2.0(jiti@2.6.1))(typescript@6.0.3))(eslint@10.2.0(jiti@2.6.1))(typescript@6.0.3)
-      "@typescript-eslint/parser": 8.58.2(eslint@10.2.0(jiti@2.6.1))(typescript@6.0.3)
+      "@typescript-eslint/eslint-plugin": 8.58.2(@typescript-eslint/parser@8.58.2(eslint@10.2.1(jiti@2.6.1))(typescript@6.0.3))(eslint@10.2.1(jiti@2.6.1))(typescript@6.0.3)
+      "@typescript-eslint/parser": 8.58.2(eslint@10.2.1(jiti@2.6.1))(typescript@6.0.3)
       "@typescript-eslint/typescript-estree": 8.58.2(typescript@6.0.3)
-      "@typescript-eslint/utils": 8.58.2(eslint@10.2.0(jiti@2.6.1))(typescript@6.0.3)
-      eslint: 10.2.0(jiti@2.6.1)
+      "@typescript-eslint/utils": 8.58.2(eslint@10.2.1(jiti@2.6.1))(typescript@6.0.3)
+      eslint: 10.2.1(jiti@2.6.1)
       typescript: 6.0.3
     transitivePeerDependencies:
       - supports-color
